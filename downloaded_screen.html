@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PRISM PRINT LAB | Digital Manufacturing Excellence</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;500;600;700&amp;family=Manrope:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "background": "#fcf9f8",
+                        "surface": "#fcf9f8",
+                        "primary": "#FF5F1F",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#FFD580",
+                        "on-primary-container": "#331400",
+                        "secondary": "#00FFFF",
+                        "on-secondary": "#000000",
+                        "secondary-container": "#008080",
+                        "on-secondary-container": "#ffffff",
+                        "secondary-fixed": "#FFAC1C",
+                        "on-surface": "#1c1b1b",
+                        "outline": "#6a7a7b",
+                        "surface-container": "#f0eded",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-variant": "#e5e2e1",
+                        "outline-variant": "#b9cacb"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-padding": "80px",
+                        "unit": "8px",
+                        "margin": "40px",
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "margin-page": "40px",
+                        "stack-md": "24px",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px",
+                    },
+                    "fontFamily": {
+                        "h1": ["Major Mono Display", "Noto Serif"],
+                        "h2": ["Major Mono Display", "Noto Serif"],
+                        "h3": ["Noto Serif"],
+                        "label-sm": ["Manrope"],
+                        "body-lg": ["Manrope"],
+                        "body-md": ["Manrope"],
+                        "label-caps": ["Manrope"]
+                    },
+                    "fontSize": {
+                        "h1": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                        "h2": ["36px", {"lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                        "h3": ["24px", {"lineHeight": "1.4", "letterSpacing": "0", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body { background-color: #fcf9f8; }
+        .artistic-card {
+            background: #ffffff;
+            border: 1px solid rgba(255, 95, 31, 0.1);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .artistic-card:hover {
+            box-shadow: 0 10px 40px -10px rgba(255, 95, 31, 0.2);
+            border-color: rgba(255, 95, 31, 0.5);
+        }
+        .glow-primary:hover {
+            box-shadow: 0 0 25px rgba(255, 95, 31, 0.4);
+        }
+        .text-glow-accent {
+            text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+        }
+        .neon-highlight {
+            color: #FF5F1F;
+            position: relative;
+            display: inline-block;
+        }
+        .neon-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 4px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background: rgba(0, 255, 255, 0.3);
+            z-index: -1;
+        }
+    </style>
+<link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&amp;display=swap" rel="stylesheet"/></head>
+<body class="font-body-md text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-surface-container">
+<div class="max-w-7xl mx-auto px-8 flex justify-between items-center h-20">
+<div class="text-2xl font-bold tracking-tight text-on-surface font-h1">
+            PRISM <span class="text-primary">PRINT LAB</span>
+</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-caps tracking-tight hover:text-secondary transition-all duration-300" href="#">Services</a>
+<a class="font-medium font-label-caps tracking-tight hover:text-primary transition-all duration-300 text-on-surface" href="#">Gallery</a>
+<a class="font-medium font-label-caps tracking-tight hover:text-primary transition-all duration-300 text-on-surface" href="#">Technology</a>
+<a class="font-medium font-label-caps tracking-tight hover:text-primary transition-all duration-300 text-on-surface" href="#">About</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-outline cursor-pointer hover:text-primary transition-colors" data-icon="account_circle">account_circle</span>
+<button class="bg-primary text-white px-8 py-2.5 font-bold font-label-caps uppercase tracking-widest transition-all hover:brightness-125 shadow-lg shadow-primary/20 glow-primary">
+                Get Quote
+            </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-15 grayscale contrast-125" data-alt="A futuristic 3D printing laboratory with large industrial robotic arms precisely laying down glowing blue resin layers in a dark, high-tech industrial facility. The atmosphere is filled with cinematic lighting, deep obsidian shadows, and vibrant neon blue electric highlights reflecting off polished metallic surfaces. The composition emphasizes precision and digital manufacturing excellence with a shallow depth of field and sharp crystalline details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCMUZOJf_grAKicmaLId7mz6TFdQOY8yvzmFUKXtSED5Kl-2WMh9xX8Ivzi9GPbSm86fbVWIC4jmkCz7xZC0ufiqlSptiUXn-fJlc8dgObqatnG3Z_jb3YIUPzYentm6JxvNh7m7laROQm_3xrtj44rDowCHY-HZw4kZ2vZlBTS2xnC1J9VaXLSHurJ74Hg3uefhAdQ7OqqPY2GgnRpz-QThQCqQdrsMqPXWb5XAfJUtlclN4ttXUvQhXpygPrrhEtQ4eUByNhQSM"/>
+<div class="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="flex flex-col justify-center space-y-stack-md">
+<div class="inline-flex items-center gap-2 px-3 py-1 bg-secondary-fixed text-secondary w-fit font-label-caps uppercase text-[10px] bg-primary/10 text-primary border border-primary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-primary shadow-[0_0_8px_#FF5F1F]"></span>
+                Nashik's Premier Tech-Print Hub
+            </div>
+<h1 class="font-h1 text-[64px] text-on-surface leading-tight font-['Major_Mono_Display']">High-Quality <br/><span class="neon-highlight">Printing Solutions</span></h1>
+<p class="font-body-lg text-on-tertiary-fixed-variant max-w-lg">
+                Experience the future of production with Flex Printing, 3D Printing &amp; Custom Solutions tailored for the industrial age. Precision in every pixel.
+            </p>
+<div class="flex flex-wrap gap-gutter pt-stack-sm">
+<button class="bg-primary text-white px-8 py-2.5 font-bold font-label-caps uppercase tracking-widest transition-all hover:brightness-125 shadow-lg shadow-primary/20 glow-primary">
+                    Get Quote
+                </button>
+<button class="px-10 py-5 border-2 border-outline-variant text-on-surface font-h3 font-bold uppercase tracking-widest hover:bg-surface-container transition-all">
+                    View Work
+                </button>
+</div>
+</div>
+</div>
+</header>
+<!-- Services Grid -->
+<section class="py-section-padding bg-surface relative z-10">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col mb-16 text-center">
+<span class="font-label-caps tracking-widest uppercase mb-4">Capabilities</span>
+<h2 class="font-h2 text-h1 text-on-surface font-['Major_Mono_Display']">Industrial Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Service Card 1 -->
+<div class="artistic-card p-10 group">
+<div class="mb-8 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="layers">layers</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Flex Printing</h3>
+<p class="text-on-tertiary-fixed-variant font-body-md mb-8">Large format high-definition banners for industrial and commercial outdoor displays.</p>
+<div class="h-0.5 w-12 group-hover:w-full transition-all duration-500 bg-primary shadow-[0_0_10px_#FF5F1F]"></div>
+</div>
+<!-- Service Card 2 -->
+<div class="artistic-card p-10 group">
+<div class="mb-8 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="3d_rotation">3d_rotation</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">3D Printing</h3>
+<p class="text-on-tertiary-fixed-variant font-body-md mb-8">Rapid prototyping and end-use part manufacturing with engineering-grade materials.</p>
+<div class="h-0.5 w-12 group-hover:w-full transition-all duration-500 bg-primary shadow-[0_0_10px_#FF5F1F]"></div>
+</div>
+<!-- Service Card 3 -->
+<div class="artistic-card p-10 group">
+<div class="mb-8 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="campaign">campaign</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Banner Printing</h3>
+<p class="text-on-tertiary-fixed-variant font-body-md mb-8">Precision exhibition graphics and indoor point-of-sale branding solutions.</p>
+<div class="h-0.5 w-12 group-hover:w-full transition-all duration-500 bg-primary shadow-[0_0_10px_#FF5F1F]"></div>
+</div>
+<!-- Service Card 4 -->
+<div class="artistic-card p-10 group">
+<div class="mb-8 group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-5xl" data-icon="palette">palette</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface mb-4">Custom Merch</h3>
+<p class="text-on-tertiary-fixed-variant font-body-md mb-8">Laser-engraved branding and high-quality customized corporate apparel and gifts.</p>
+<div class="h-0.5 w-12 group-hover:w-full transition-all duration-500 bg-primary shadow-[0_0_10px_#FF5F1F]"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Masonry -->
+<section class="py-section-padding bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<span class="font-label-caps tracking-widest uppercase mb-4">Our Portfolio</span>
+<h2 class="font-h2 text-h1 text-on-surface font-['Major_Mono_Display']">The Production Line</h2>
+</div>
+<div class="flex flex-wrap gap-4 font-label-caps">
+<button class="px-8 py-3 bg-primary text-white shadow-lg shadow-primary/10">ALL</button>
+<button class="px-8 py-3 bg-white text-on-surface border border-surface-container-highest hover:bg-primary-container/20 transition-colors">3D PRINTING</button>
+<button class="px-8 py-3 bg-white text-on-surface border border-surface-container-highest hover:bg-primary-container/20 transition-colors">FLEX</button>
+<button class="px-8 py-3 bg-white text-on-surface border border-surface-container-highest hover:bg-primary-container/20 transition-colors">BANNERS</button>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="md:col-span-2 relative group overflow-hidden h-[450px] shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A wide-angle shot of a massive professional vinyl banner printing machine in operation, producing a vibrant high-resolution landscape graphic. The scene is set in a dark industrial warehouse with sleek metallic machinery and cinematic blue task lighting. Cool mist from the print heads creates a subtle atmospheric haze, while the background features blurred silhouettes of professional technicians monitoring the production line." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhX23kAOZBy2xj0ev9vG7s1TivYnFcUVChka_SAWJCMu109S3QuUofSuzNnMm2xks1j38e6s78FatTvdZ-xyQQ5U5l65F-mDKpOgsMherzEUblLvMU_Xf0ufJufCUa9HtTY6-xMX3bolLMjKDg8o6wNxc3EIkmtZAHnWPu4SgSpjLbqebe-r499N2CC-a8JNJJ3fnddNefPihnUd2_Vvd0549oqXEFrrrob0wrj0UhuXWcKZJ3saYrVWhcIXLPEc3jn0aQ5xImsYg"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex items-center justify-center">
+<div class="text-center p-8 scale-90 group-hover:scale-100 transition-transform duration-500">
+<h4 class="font-h3 text-white text-3xl">Mega Flex Installation</h4>
+<p class="text-primary-fixed-dim font-label-caps mt-4 tracking-widest">OUTDOOR CAMPAIGN</p>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden h-[450px] shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="Close-up macro photography of a complex 3D printed geometric prototype, showcasing intricate honeycomb structures and fine detail. The object is rendered in a semi-translucent neon blue resin, illuminated by a sharp spotlight that highlights the precision layers and crystalline texture. The background is a dark, minimalist laboratory workspace with subtle bokeh from high-tech equipment lights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx-fsvScPigSxEpwh4lnfFgQDSwlwCB02A8c7m4LYrhWVCzfMqwtJZqtYTJnzuL6P3VcNEXQyh9ASYPesi7gKmHXxCxkAbPmYNQNS5Xnem1BL6eRzZT2BUTO-qw8R7pNm6Sd4Gyd6ULHyk8E_WCezNvzUQtw7HwZG4WcScG1HhHmrmcArPGTHekYuqTSqt1lO6AvqmElRk3Uj9Ps58bTcA2j0rTys1tX2oaRlzRkoTg45UU2rvzknTCPUKX0nHtkIqW0fUVim5u1c"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex items-center justify-center">
+<div class="text-center p-8 scale-90 group-hover:scale-100 transition-transform duration-500">
+<h4 class="font-h3 text-white text-3xl">Precision Prototype</h4>
+<p class="text-primary-fixed-dim font-label-caps mt-4 tracking-widest">3D SLA PRINTING</p>
+</div>
+</div>
+</div>
+<div class="relative group overflow-hidden h-[350px] shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A row of premium branded corporate merchandise including laser-engraved metallic pens and minimalist notebooks arranged on a dark glass table. The lighting is low-key with sharp highlights reflecting off the metallic surfaces, emphasizing a professional and high-end aesthetic. The background is a blurred office environment with a deep charcoal and blue color palette consistent with industrial luxury branding." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmSWEpdB4qEyHgTAa4trEIkISiHYfX0Zr-SPMrKgabTnBy3VMJ-OQWABjgbK5skGJTmx65JSpUEJtduAuI-ZcuuGDEbwGUWzKhRaFZejSm70856aE5qc3nrG3O7QTU9w54FQpishk9TU-KOTXzpfScqZeg58dnrT5J4Jp4fzY_eHoc0EdMpVakoHSgTRcHRFm6yRDFeP3E7fTxfdYa02K-wxnx4qvkK12T2yYhd61qyGInoW98JafKtQsd_L_ce9P6VGYC0A6v3ok"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex items-center justify-center">
+<div class="text-center p-8 scale-90 group-hover:scale-100 transition-transform duration-500">
+<h4 class="font-h3 text-white text-2xl">Corporate Kit</h4>
+<p class="text-primary-fixed-dim font-label-caps mt-4 tracking-widest">LASER ENGRAVING</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 relative group overflow-hidden h-[350px] shadow-sm">
+<img class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105" data-alt="A dramatic scene showing high-intensity UV curing lights inside a wide-format industrial printer, emitting a brilliant neon blue glow as they pass over a fresh print. The light illuminates droplets of ink in mid-air, creating a scientific and futuristic digital manufacturing atmosphere. The machine's hardware is visible in deep charcoal and black tones, with chrome highlights reflecting the electric blue energy of the printing process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd25bojGDMLiR_UZUmN3XtCv0cz9vj0-OZysF2tkogcAPw1OiqjuqHip-yDaO5a3GuPD_Kz_LccOJTC9pgokKMUIX3VFu31PSQkXSwctclcvZ8KCHaF9I9EWu7iT5SzLdYVEHiXdPasui8UpHwVNjXAOhobrESSSi-4rj3uz-TjLyMU_8MoQFpZITiSFp4AoSc3JwB2MGMf4pokFv2eHOVnkmb2rk1fuSenBo2UfA6SWZEp0AVkP6bt9XlD25htuBkjjktRRBiHvQ"/>
+<div class="absolute inset-0 bg-primary/40 opacity-0 group-hover:opacity-100 transition-opacity duration-500 backdrop-blur-[2px] flex items-center justify-center">
+<div class="text-center p-8 scale-90 group-hover:scale-100 transition-transform duration-500">
+<h4 class="font-h3 text-white text-3xl">UV Curing Line</h4>
+<p class="text-primary-fixed-dim font-label-caps mt-4 tracking-widest">DIGITAL MANUFACTURING</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section with Stats -->
+<section class="py-section-padding bg-white">
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<span class="font-label-caps tracking-widest uppercase mb-4">Our Identity</span>
+<h2 class="font-h2 text-h1 text-on-surface mb-8 font-['Major_Mono_Display']">Digital Manufacturing Excellence</h2>
+<p class="text-on-tertiary-fixed-variant font-body-lg mb-12">
+                Based in the heart of Nashik, PRISM PRINT LAB bridges the gap between digital vision and tangible reality. We utilize state-of-the-art additive manufacturing and precision plotting technology to deliver unmatched quality for industrial and commercial sectors.
+            </p>
+<div class="grid grid-cols-2 gap-12">
+<div class="border-l-2 pl-6 border-primary">
+<div class="text-5xl font-h1 text-glow-accent text-secondary">12+</div>
+<div class="font-label-caps text-outline tracking-tighter mt-2">YEARS EXPERIENCE</div>
+</div>
+<div class="border-l-2 pl-6 border-primary">
+<div class="text-5xl font-h1 text-glow-accent text-secondary">5.2K</div>
+<div class="font-label-caps text-outline tracking-tighter mt-2">PROJECTS COMPLETED</div>
+</div>
+<div class="border-l-2 pl-6 border-primary">
+<div class="text-5xl font-h1 text-glow-accent text-secondary">100%</div>
+<div class="font-label-caps text-outline tracking-tighter mt-2">PRECISION TOLERANCE</div>
+</div>
+<div class="border-l-2 pl-6 border-primary">
+<div class="text-5xl font-h1 text-glow-accent text-secondary">24/7</div>
+<div class="font-label-caps text-outline tracking-tighter mt-2">LAB OPERATION</div>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<div class="relative p-6 bg-surface-container-low rounded-xl">
+<img class="w-full h-auto shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A high-tech industrial office and production space in Nashik with rows of high-resolution monitors displaying architectural CAD designs and 3D printing software. The environment is impeccably clean and organized with a minimalist dark theme, illuminated by soft overhead LED panels and neon blue accent strips along the floor. Professional workstations are equipped with precision tools, reflecting a mood of advanced engineering and digital craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmSdbWlsXY4WhjRpjqFBwoBMhKMWIkvt3xVfTLXtqDuzhck-q16twCQMbzrMRAUJlPA855O5N0tT_yIZOuqIxza3lGqlEdtf3WBwpp0-5WRN_Ifly6nvbLTpe21kzyO6JZZfKFt1-x7DyAEl9sF7lqTWdGqassDbOXmH5RH_KUOFnpKz65hC-40-icjbsGhc2uL_6Yj9uJUFNIjRn6e4XfxLANeodQ1iJcFoHG9V_Jb2bUZJyy4zi1j74ntTDbMkMyqS5CiD0DiPE"/>
+<div class="absolute -bottom-10 -left-10 bg-white p-8 shadow-xl border border-surface-container">
+<span class="material-symbols-outlined text-primary text-5xl" data-icon="verified">verified</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-8">
+<div class="text-center mb-16">
+<span class="font-label-caps tracking-widest uppercase mb-4">Verified Feedback</span>
+<h2 class="font-h2 text-h1 text-on-surface font-['Major_Mono_Display']">Client Logs</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="bg-white p-10 border border-surface-container shadow-sm">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface font-body-md mb-10 italic leading-relaxed">"The precision of their 3D prototypes is unparalleled in Nashik. Our engineering firm saved weeks in the R&amp;D phase thanks to Prism."</p>
+<div>
+<p class="font-h3 text-on-surface text-lg">Rahul Varma</p>
+<p class="font-label-caps text-outline text-[11px] mt-1 uppercase">Lead Engineer, Autotech</p>
+</div>
+</div>
+<div class="bg-white p-10 border border-surface-container shadow-sm">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface font-body-md mb-10 italic leading-relaxed">"Fantastic flex printing quality for our showroom launch. The color accuracy on such a large scale was impressive."</p>
+<div>
+<p class="font-h3 text-on-surface text-lg">Priya Deshmukh</p>
+<p class="font-label-caps text-outline text-[11px] mt-1 uppercase">Marketing Director, Zenith Luxury</p>
+</div>
+</div>
+<div class="bg-white p-10 border border-surface-container shadow-sm">
+<div class="flex gap-1 mb-6">
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-base text-primary drop-shadow-[0_0_5px_#FF5F1F]" data-icon="star" data-weight="fill">star</span>
+</div>
+<p class="text-on-surface font-body-md mb-10 italic leading-relaxed">"Quick turnaround on a large merchandise order. The laser engraving is crisp and perfectly aligned on every item."</p>
+<div>
+<p class="font-h3 text-on-surface text-lg">Sanjay K.</p>
+<p class="font-label-caps text-outline text-[11px] mt-1 uppercase">Operations, Nashik Hub</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding bg-white relative overflow-hidden">
+<div class="absolute right-0 bottom-0 w-1/2 h-1/2 bg-primary/5 blur-[150px] rounded-full -z-10"></div>
+<div class="max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-20">
+<div>
+<span class="font-label-caps tracking-widest uppercase mb-4">Initialize Project</span>
+<h2 class="font-h2 text-h1 text-on-surface mb-8 font-['Major_Mono_Display']">Ready to Print?</h2>
+<p class="text-on-tertiary-fixed-variant font-body-lg mb-12">Submit your specifications below or reach out via direct link for a priority consultation.</p>
+<div class="space-y-10">
+<div class="flex items-start gap-8">
+<div class="p-5 bg-surface-container-low text-primary bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-3xl" data-icon="location_on">location_on</span>
+</div>
+<div>
+<h4 class="font-h3 text-on-surface text-xl">Lab Location</h4>
+<p class="text-on-tertiary-fixed-variant font-body-md mt-1">MIDC Ambad, Nashik, Maharashtra 422010</p>
+</div>
+</div>
+<div class="flex items-start gap-8">
+<div class="p-5 bg-surface-container-low text-primary bg-primary/10 text-primary border border-primary/20">
+<span class="material-symbols-outlined text-3xl" data-icon="mail">mail</span>
+</div>
+<div>
+<h4 class="font-h3 text-on-surface text-xl">Email Interface</h4>
+<p class="text-on-tertiary-fixed-variant font-body-md mt-1">orders@prismprintlab.in</p>
+</div>
+</div>
+<div class="pt-8">
+<a class="inline-flex items-center gap-5 bg-[#25D366] hover:bg-[#128C7E] text-white px-10 py-5 rounded-none font-bold transition-all shadow-xl shadow-emerald-500/10 uppercase tracking-widest font-label-caps" href="#">
+<span class="material-symbols-outlined" data-icon="chat">chat</span>
+                        WhatsApp Interface
+                    </a>
+</div>
+</div>
+</div>
+<div class="bg-white p-12 border border-surface-container shadow-2xl">
+<form class="space-y-8">
+<div class="space-y-3">
+<label class="font-label-caps text-on-tertiary-fixed-variant text-[11px]">COMMANDER NAME</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-surface-container-highest focus:ring-0 text-on-surface py-3 px-4 transition-all focus:border-secondary focus:ring-1 focus:ring-secondary/30" placeholder="Identity entry..." type="text"/>
+</div>
+<div class="space-y-3">
+<label class="font-label-caps text-on-tertiary-fixed-variant text-[11px]">PHONE TERMINAL</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-surface-container-highest focus:ring-0 text-on-surface py-3 px-4 transition-all focus:border-secondary focus:ring-1 focus:ring-secondary/30" placeholder="+91 ..." type="tel"/>
+</div>
+<div class="space-y-3">
+<label class="font-label-caps text-on-tertiary-fixed-variant text-[11px]">REQUIREMENT SPECIFICATIONS</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b border-surface-container-highest focus:ring-0 text-on-surface py-3 px-4 transition-all focus:border-secondary focus:ring-1 focus:ring-secondary/30" placeholder="Detail your project..." rows="4"></textarea>
+</div>
+<div class="space-y-3">
+<label class="font-label-caps text-on-tertiary-fixed-variant text-[11px]">ATTACH DESIGN FILES</label>
+<div class="border border-dashed border-outline-variant p-10 text-center hover:bg-surface-container-low transition-colors cursor-pointer group">
+<span class="material-symbols-outlined text-outline group-hover:text-primary mb-4 text-4xl" data-icon="upload_file">upload_file</span>
+<p class="text-on-tertiary-fixed-variant text-sm">Drag &amp; drop blueprints or click to upload</p>
+</div>
+</div>
+<button class="bg-primary text-white px-8 py-2.5 font-bold font-label-caps uppercase tracking-widest transition-all hover:brightness-125 shadow-lg shadow-primary/20 glow-primary">
+                    Send Specifications
+                </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white w-full py-20 px-8 border-t border-surface-container">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="text-2xl font-bold text-on-surface font-h1">
+            PRISM <span class="text-primary">PRINT LAB</span>
+</div>
+<div class="flex flex-wrap justify-center gap-10">
+<a class="font-label-caps text-xs uppercase tracking-[0.2em] text-outline hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-xs uppercase tracking-[0.2em] text-outline hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-xs uppercase tracking-[0.2em] text-outline hover:text-primary transition-colors" href="#">Industrial Standards</a>
+<a class="font-label-caps text-xs uppercase tracking-[0.2em] text-outline hover:text-primary transition-colors" href="#">WhatsApp Support</a>
+</div>
+<div class="font-label-caps text-xs uppercase tracking-widest text-outline text-center md:text-right leading-loose">
+            © 2024 Prism Print Lab Nashik.<br/>Digital Manufacturing Excellence.
+        </div>
+</div>
+</footer>
+</body></html>
