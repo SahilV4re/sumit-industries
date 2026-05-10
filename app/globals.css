@@ -88,8 +88,8 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-sans;
-  }
+  font-family: "Quicksand", system-ui, sans-serif;
+}
 }
 
 @layer utilities {
@@ -169,6 +169,7 @@
 }
 
 :root {
+  --font-sans: "Quicksand", system-ui, sans-serif;
   --background: oklch(1 0 0);
   --foreground: oklch(0.145 0 0);
   --card: oklch(1 0 0);

@@ -10,32 +10,49 @@ export default function Footer() {
       <div className="max-w-6xl mx-auto px-6 py-12">
 
         {/* TOP SECTION */}
-        <div className="grid md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-10">
 
           {/* BRAND */}
-                  <div>
-                  <div className="flex items-center gap-2">
-                  <Image src="/logo.jpg" alt="logo" width={80} height={80} />          
-            <h2 className="text-lg font-semibold">Sumit Industries</h2></div>
+          <div className="col-span-2 md:col-span-1">
+            <div className="flex items-center gap-2">
+              {/* <Image src="/logo.jpg" alt="logo" width={80} height={80} />           */}
+              <h2 className="text-lg font-semibold">Sumit Industries</h2>
+            </div>
             <p className="text-gray-500 mt-3 text-sm leading-relaxed">
               Manufacturing solutions crafted with precision and speed.
             </p>
           </div>
 
+          {/* SERVICES */}
+          <div>
+            <h3 className="text-sm font-semibold mb-4 text-zinc-900">Services</h3>
+            <div className="flex flex-col gap-3 text-sm text-gray-600">
+              <Link href="/services/flex-printing" className="hover:text-black transition">
+                Flex Printing
+              </Link>
+              <Link href="/services/uv-printing" className="hover:text-black transition">
+                UV Printing
+              </Link>
+              <Link href="/services/cnc-cutting" className="hover:text-black transition">
+                CNC Cutting
+              </Link>
+              <Link href="/services/led-signage" className="hover:text-black transition">
+                LED Signage
+              </Link>
+            </div>
+          </div>
+
           {/* LINKS */}
           <div>
-            <h3 className="text-sm font-semibold mb-4">Quick Links</h3>
-            <div className="flex flex-col gap-2 text-sm text-gray-600">
-              <Link href="#services" className="hover:text-black transition">
-                Services
-              </Link>
-              <Link href="#gallery" className="hover:text-black transition">
+            <h3 className="text-sm font-semibold mb-4 text-zinc-900">Quick Links</h3>
+            <div className="flex flex-col gap-3 text-sm text-gray-600">
+              <Link href="/gallery" className="hover:text-black transition">
                 Gallery
               </Link>
-              <Link href="#about" className="hover:text-black transition">
+              <Link href="/about" className="hover:text-black transition">
                 About
               </Link>
-              <Link href="#contact" className="hover:text-black transition">
+              <Link href="/contact" className="hover:text-black transition">
                 Contact
               </Link>
             </div>
