@@ -5,6 +5,7 @@ import Reveal from "../../../components/ui/reveal";
 import MagneticButton from "../../../components/ui/magnetic-button";
 import MachineShowcase from "../../../components/services/MachineShowcase";
 import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 export default async function ServicePage({
   params,
@@ -312,7 +313,7 @@ export default async function ServicePage({
         </p>
 
         <div className="mt-6">
-          <MagneticButton>Get Quote</MagneticButton>
+          <MagneticButton>Contact Us</MagneticButton>
         </div>
       </section>
 

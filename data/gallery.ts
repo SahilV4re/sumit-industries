@@ -17,7 +17,7 @@ export const galleryData: GalleryCategory[] = [
       "/gallery/flex/2.jpeg",
       "/gallery/flex/3.jpeg",
       "/gallery/flex/4.jpeg",
-      "/gallery/flex/5.jpeg",
+      
     ],
   },
 
@@ -32,7 +32,7 @@ export const galleryData: GalleryCategory[] = [
       "/gallery/uv/2.jpeg",
       "/gallery/uv/3.jpeg",
       "/gallery/uv/4.jpeg",
-      "/gallery/uv/5.jpeg",
+      
     ],
   },
 
@@ -61,9 +61,9 @@ export const galleryData: GalleryCategory[] = [
       "Custom illuminated signage, branding installations, and premium channel letter fabrication for commercial applications.",
 
     images: [
-      "/gallery/led/1.mp4",
+      "/gallery/led/2.mp4",
       "/gallery/led/2.jpeg",
-      "/gallery/led/3.jpeg",
+      "/gallery/led/1.mp4",
       "/gallery/led/4.jpeg",
       "/gallery/led/5.jpeg",
     ],

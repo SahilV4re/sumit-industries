@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function MachinesSection() {
   return (
-    <section className="py-24 px-6 bg-white">
+    <section className="py-16 sm:py-24 px-4 sm:px-6 bg-white">
       <div className="max-w-6xl mx-auto">
 
         {/* Heading */}
@@ -25,7 +25,7 @@ export default function MachinesSection() {
           <div className="grid md:grid-cols-2 items-center">
 
             {/* IMAGE */}
-            <div className="relative w-full h-[300px] md:h-full">
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-full min-h-[250px]">
               <Image
                 src="/UV Flatbed.jpeg"
                 alt="UV Flatbed Machine"
@@ -55,7 +55,7 @@ export default function MachinesSection() {
         </motion.div>
 
         {/* SMALL CARDS */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6">
 
           {[
             {

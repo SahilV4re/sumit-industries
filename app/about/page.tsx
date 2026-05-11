@@ -6,10 +6,10 @@ import { Beam } from "@/components/ui/background-grid-beam";
 
 export default function AboutPage() {
   return (
-    <main className="bg-white">
+    <main className="bg-white pt-2">
 
       {/* HERO */}
-      <section className="relative py-28 px-6 bg-gradient-to-b from-white via-zinc-50 to-white overflow-hidden">
+      <section className="relative py-16 sm:py-28 px-4 sm:px-6 bg-gradient-to-b from-white via-zinc-50 to-white overflow-hidden">
         <div className="absolute inset-0 opacity-20 bg-[linear-gradient(to_right,#d4d4d8_1px,transparent_1px),linear-gradient(to_bottom,#d4d4d8_1px,transparent_1px)] bg-[size:40px_40px]" />
         <Beam />
 
@@ -19,7 +19,7 @@ export default function AboutPage() {
               About Us
             </p>
 
-            <h1 className="text-5xl md:text-6xl font-semibold tracking-tight leading-tight text-zinc-900">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold tracking-tight leading-tight text-zinc-900">
               Precision Manufacturing Built for Commercial Excellence
             </h1>
 
@@ -34,7 +34,7 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative h-[520px] rounded-3xl overflow-hidden">
+          <div className="relative h-[300px] sm:h-[420px] md:h-[520px] rounded-3xl overflow-hidden">
             <Image
               src="/hero-2.jpeg"
               alt="About Sumit Industries"
@@ -61,9 +61,9 @@ export default function AboutPage() {
             
             {/* RIGHT: CONTENT */}
             <div className="text-center md:text-left">
-              <h2 className="text-3xl md:text-4xl font-semibold text-zinc-900 flex items-baseline justify-center md:justify-start gap-2">
-                Mr. Sumit Ashok Vispute
-                <span className="text-xl md:text-2xl text-zinc-400 font-normal">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-zinc-900 flex flex-col sm:flex-row sm:items-baseline justify-center md:justify-start gap-1 sm:gap-2">
+                <span>Mr. Sumit Ashok Vispute</span>
+                <span className="text-base sm:text-xl md:text-2xl text-zinc-400 font-normal">
                   (B.E Design)
                 </span>
               </h2>
@@ -277,7 +277,7 @@ export default function AboutPage() {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <Button variant="outline" className=" border border-white-500 bg-black px-4">Contact Us</Button>
+            <MagneticButton>Contact Us</MagneticButton>
           </div>
         </div>
       </section>

@@ -156,13 +156,34 @@ export default function MenuBar() {
     const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
 
+  const closeMenu = () => {
+    setOpen(false);
+    setServicesOpen(false);
+  };
+
   return (
     <div className="relative">
-      {/* HAMBURGER */}
-      <button onClick={() => setOpen(!open)}>
-        <div className="w-6 h-[2px] bg-black mb-1" />
-        <div className="w-6 h-[2px] bg-black mb-1" />
-        <div className="w-6 h-[2px] bg-black" />
+      {/* HAMBURGER — 3 consistent lines with animation */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="relative w-7 h-5 flex flex-col justify-between items-center"
+        aria-label="Toggle menu"
+      >
+        <span
+          className={`block w-6 h-[2px] bg-black rounded-full transition-all duration-300 origin-center ${
+            open ? "rotate-45 translate-y-[9px]" : ""
+          }`}
+        />
+        <span
+          className={`block w-6 h-[2px] bg-black rounded-full transition-all duration-300 ${
+            open ? "opacity-0 scale-0" : "opacity-100 scale-100"
+          }`}
+        />
+        <span
+          className={`block w-6 h-[2px] bg-black rounded-full transition-all duration-300 origin-center ${
+            open ? "-rotate-45 -translate-y-[9px]" : ""
+          }`}
+        />
       </button>
 
       {/* MENU */}
@@ -195,10 +216,10 @@ export default function MenuBar() {
                     exit={{ opacity: 0, height: 0 }}
                     className="mt-2 flex flex-col gap-2 text-sm text-gray-600 pl-2"
                   >
-                    <Link href="/services/flex-printing">Flex Printing</Link>
-                    <Link href="/services/uv-printing">UV Printing</Link>
-                    <Link href="/services/cnc-cutting">CNC Cutting</Link>
-                    <Link href="/services/led-signage">LED Signage</Link>
+                    <Link href="/services/flex-printing" onClick={closeMenu}>Flex Printing</Link>
+                    <Link href="/services/uv-printing" onClick={closeMenu}>UV Printing</Link>
+                    <Link href="/services/cnc-cutting" onClick={closeMenu}>CNC Cutting</Link>
+                    <Link href="/services/led-signage" onClick={closeMenu}>LED Signage</Link>
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -208,13 +229,14 @@ export default function MenuBar() {
             <div className="h-px bg-gray-200" />
 
             {/* OTHER LINKS */}
-            <Link href="/gallery">Gallery</Link>
-            <Link href="/about">About</Link>
-            <Link href="/contact">Contact</Link>
+            <Link href="/gallery" onClick={closeMenu}>Gallery</Link>
+            <Link href="/about" onClick={closeMenu}>About</Link>
+            <Link href="/contact" onClick={closeMenu}>Contact</Link>
 
             {/* CTA */}
             <Link
               href="/contact"
+              onClick={closeMenu}
               className="mt-3 bg-black text-white px-4 py-2 rounded-lg text-center text-sm font-medium"
             >
               Get Quote

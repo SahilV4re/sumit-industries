@@ -62,7 +62,7 @@ export default function GalleryPage() {
           </p>
 
           <div className="mt-10 flex justify-center">
-            <Button variant="outline" className="bg-black border border-white w-fit">Contact Us</Button>
+            <MagneticButton>Contact Us</MagneticButton>
           </div>
         </div>
       </section>

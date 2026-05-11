@@ -28,7 +28,7 @@ export default function Home() {
 
       {/* HERO - GRID + SPOTLIGHT */}
     {/* HERO */}
-    <section className="relative min-h-screen flex items-center px-6 py-24 overflow-hidden bg-white">
+    <section className="relative min-h-screen flex items-center px-4 sm:px-6 py-16 sm:py-24 overflow-hidden bg-white">
 
       {/* GRID BACKGROUND */}
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#e5e7eb_1px,transparent_1px),linear-gradient(to_bottom,#e5e7eb_1px,transparent_1px)] bg-[size:40px_40px]" />
@@ -42,7 +42,7 @@ export default function Home() {
         }}
       />
 
-      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center relative z-10">
+      <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 md:gap-16 items-center relative z-10">
 
         {/* LEFT CONTENT */}
         <motion.div
@@ -50,7 +50,7 @@ export default function Home() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight">
+          <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight">
   Industrial Printing <br />
   & Fabrication Solutions
 </h1>
@@ -61,7 +61,7 @@ export default function Home() {
           </p>
 
           <div className="mt-8 flex gap-4">
-            <Link href="/contact"><MagneticButton>Contact Us</MagneticButton></Link>
+            <Link href="/services/flex-printing"><MagneticButton>Explore Services</MagneticButton></Link>
             <Link href="/gallery"><MagneticButton outline>View Work</MagneticButton></Link>
           </div>
 
@@ -80,8 +80,8 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <div className="h-[500px] w-full rounded-2xl border bg-gray-100 flex items-center justify-center text-gray-400">
-            <Image src="/hero-1.jpeg" alt="hero" width={500} height={500} className="object-fit w-full h-full" />
+          <div className="h-[280px] sm:h-[400px] md:h-[500px] w-full rounded-2xl border bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden">
+            <Image src="/hero-1.jpeg" alt="hero" width={500} height={500} className="object-cover w-full h-full" />
           </div>
 
           {/* subtle depth glow */}
@@ -154,17 +154,17 @@ export default function Home() {
   </div>
 )}
       {/* CTA */}
-      <section className="py-24 text-center bg-white">
-  <h2 className="text-4xl font-bold">
+      <section className="py-24 text-center bg-gradient-to-r from-black to-zinc-900">
+  <h2 className="text-4xl font-bold text-white">
     Have a Project in Mind?
   </h2>
 
-  <p className="text-gray-500 mt-3">
+  <p className="text-gray-100 mt-3">
     Let’s build it with precision and speed.
   </p>
 
   <div className="mt-8">
-    <Link href="/contact"><MagneticButton>Contact US</MagneticButton></Link>
+    <Link href="/contact"><MagneticButton>Contact Us</MagneticButton></Link>
   </div>
 </section>
 
@@ -205,8 +205,8 @@ function MagneticButton({
       transition={{ type: "spring", stiffness: 150, damping: 10 }}
       className={`px-6 py-3 rounded-lg ${
         outline
-          ? "border border-gray-400"
-          : "bg-black text-white hover:bg-gray-800"
+          ? "border border-white"
+          : "border border-white bg-black text-white hover:bg-gray-800"
       }`}
     >
       {children}
