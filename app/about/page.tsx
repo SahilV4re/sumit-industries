@@ -34,12 +34,12 @@ export default function AboutPage() {
             </div>
           </div>
 
-          <div className="relative h-[300px] sm:h-[420px] md:h-[520px] rounded-3xl overflow-hidden">
+          <div className="relative h-[300px] sm:h-[420px] md:h-[520px] rounded-3xl overflow-hidden border-2 border-zinc-200 md:border-0 ">
             <Image
               src="/hero-2.jpeg"
               alt="About Sumit Industries"
               fill
-              className="object-cover"
+              className="object-top object-cover"
             />
           </div>
         </div>

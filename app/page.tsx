@@ -51,8 +51,8 @@ export default function Home() {
           transition={{ duration: 0.6 }}
         >
           <h1 className="text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight">
-  Industrial Printing <br />
-  & Fabrication Solutions
+  Precision Printing <br />
+  & Fabrication Excellence
 </h1>
 
           <p className="mt-5 text-gray-600 max-w-md">
@@ -80,8 +80,8 @@ export default function Home() {
           transition={{ duration: 0.6 }}
           className="relative"
         >
-          <div className="h-[280px] sm:h-[400px] md:h-[500px] w-full rounded-2xl border bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden">
-            <Image src="/hero-1.jpeg" alt="hero" width={500} height={500} className="object-cover w-full h-full" />
+          <div className="h-[350px] sm:h-[500px] md:h-[500px] w-full rounded-2xl border bg-gray-100 flex items-center justify-center text-gray-400 overflow-hidden">
+            <Image src="/hero-1.jpeg" alt="hero" width={500} height={500} className="object-top object-cover w-full h-full" />
           </div>
 
           {/* subtle depth glow */}
@@ -164,7 +164,7 @@ export default function Home() {
   </p>
 
   <div className="mt-8">
-    <Link href="/contact"><MagneticButton>Contact Us</MagneticButton></Link>
+    <Link href="/contact"><MagneticButton>Contact US</MagneticButton></Link>
   </div>
 </section>
 
@@ -172,7 +172,7 @@ export default function Home() {
     <a
   href="https://wa.me/919999999999"
   target="_blank"
-  className="fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:scale-105 transition font-medium"
+  className="z-50 fixed bottom-6 right-6 bg-green-500 text-white px-5 py-3 rounded-full shadow-lg hover:scale-105 transition font-medium"
 >
   WhatsApp
 </a>     
@@ -205,7 +205,7 @@ function MagneticButton({
       transition={{ type: "spring", stiffness: 150, damping: 10 }}
       className={`px-6 py-3 rounded-lg ${
         outline
-          ? "border border-white"
+          ? "border border-gray-400"
           : "border border-white bg-black text-white hover:bg-gray-800"
       }`}
     >

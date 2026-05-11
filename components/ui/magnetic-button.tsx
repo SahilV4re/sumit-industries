@@ -26,7 +26,7 @@ export default function MagneticButton({
       transition={{ type: "spring", stiffness: 150, damping: 10 }}
       className={`px-6 py-3 rounded-lg ${
         outline
-          ? "border border-white"
+          ? "border border-gray-400"
           : "border border-white bg-black text-white hover:bg-gray-800"
       }`}
     >
